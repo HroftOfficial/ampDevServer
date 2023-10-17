@@ -1,0 +1,36 @@
+import express from 'express';
+import { router as userRoute } from './users';
+import { router as userAmpRouter } from './usersAmp';
+import { router as WorkGroupRouter } from './workGroup';
+import { router as TomsRouter } from './toms';
+import { router as TomsGroupsRouter } from './tomsGroup';
+import { router as Zakazes } from './zakazes';
+import { router as NewsRouter } from './news';
+import { router as Info } from './info';
+import { router as Draft } from './draft';
+import { router as Chat } from './chat';
+import { router as Messages } from './messages';
+import { router as Telegram } from './telegram';
+import { router as Ad } from './ad';
+import { router as MainPlantGroup } from './mainPlantGroup';
+import { router as PlantGroupAp } from './plantGroupAp';
+import { router as PlantAp } from './plantAp';
+
+export const router = express.Router();
+
+router.use('/users', userRoute);
+router.use('/users_amp', userAmpRouter);
+router.use('/work_group', WorkGroupRouter);
+router.use('/toms', TomsRouter);
+router.use('/toms_group', TomsGroupsRouter);
+router.use('/zakazes', Zakazes);
+router.use('/news', NewsRouter);
+router.use('/info', Info);
+router.use('/draft', Draft);
+router.use('/chats', Chat);
+router.use('/messages', Messages);
+router.use('/telegram', Telegram);
+router.use('/ad', Ad);
+router.use('/main_plant', MainPlantGroup);
+router.use('/plant_group_ap', PlantGroupAp);
+router.use('/plant_ap', PlantAp);
